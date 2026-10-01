@@ -1,32 +1,56 @@
-body {
+*{
+    padding: 0;
     margin: 0;
-    height: 100vh;
-    background: linear-gradient(135deg, #00a000, #66bb6a, #e8f5e9);
-justify-content: center;
 }
-h1, h3 {
-    padding: 0 15px;
-    text-align: center;
-    color: #000000;
+body {
+    background-color:;
 }
-.menu-box {
-    display: flex;
-    justify-content: center;
-    gap :20px;
-    background: rgba(100, 200, 128, 0.8);padding: 15px;
-    border-radius: 10px;
-    width: fit-content;
-    margin: 0 auto; /* supaya box ada di tengah */
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
-}
-.menu-box a {
-    text-decoration: none;
-      background: hsl(120, 100%, 31% ) ;
-      color: rgb(255, 255, 255);
-      border-radius: 10px;
-      padding: 10px;
-      border: 1px solid rgb(196, 190, 190);
+.container-header {
+    background-color: rgb(10, 212, 27);
 
+box-shadow: 0px 1px 3px 3px rgba(0,0,0,0.4);
+}   
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap :12px;
+}
+.icon-navbar {
+    height: 60px;
+    width: auto;
+    padding: 5px;
+}
+.judul-header {
+    font-weight: 500;
+    font-size:large;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.li-navbar {
+    align-items: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu-list ul {
+    display: flex;
+   
+}
+.menu-list li {
+    width: 100%;
+    padding: 8px;
+    color:black;
+    list-style-type: none;
+    
+    /* background-color:rgba(21, 255, 0, 0.343); */
+    flex: 1;
+    text-align: center;
+}
+
+/* content */
+
+.berita-text {
+    font-size: larger;
+    background-color:rgb(10, 270, 27);
+    padding: 4px;
+    box-shadow: 3px 3px 3px -1px rgba(0,0,0,0.4);
 }
