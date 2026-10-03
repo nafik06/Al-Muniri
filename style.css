@@ -1,56 +1,86 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Mencegah ukuran elemen melenceng karena padding */
 }
-body {
-    background-color:;
+
+/* Pastikan layar memiliki tinggi penuh */
+html, body {
+    height: 100%;
 }
+
+/* 1. Atur container pembungkus utama sebagai flex column */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Setinggi layar ponsel/browser */
+}
+
 .container-header {
     background-color: rgb(10, 212, 27);
+    /* Hapus height: 10vh agar tidak kaku */
+    box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.4);
+}
 
-box-shadow: 0px 1px 3px 3px rgba(0,0,0,0.4);
-}   
 .logo-box {
     display: flex;
     align-items: center;
-    gap :12px;
+    gap: 12px;
 }
+
 .icon-navbar {
     height: 60px;
     width: auto;
     padding: 5px;
 }
+
 .judul-header {
     font-weight: 500;
-    font-size:large;
+    font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-   
 }
+
 .li-navbar {
     align-items: center;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .menu-list ul {
     display: flex;
-   
 }
+
 .menu-list li {
     width: 100%;
     padding: 8px;
-    color:black;
+    color: black;
     list-style-type: none;
-    
-    /* background-color:rgba(21, 255, 0, 0.343); */
     flex: 1;
     text-align: center;
+    box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
 }
 
-/* content */
+/* 2. Ubah container-content dengan flex: 1 */
+.container-content {
+    flex: 1; /* Mengisi seluruh area kosong sehingga footer terdorong ke bawah */
+    background-color: whitesmoke;
+    padding: 10px; /* Gunakan padding ketimbang <br> */
+}
 
 .berita-text {
     font-size: larger;
-    background-color:rgb(10, 270, 27);
+    background-color: rgb(10, 212, 27);
     padding: 4px;
-    box-shadow: 3px 3px 3px -1px rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.4);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3. Footer otomatis berada di paling bawah */
+.container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: gray;
 }
